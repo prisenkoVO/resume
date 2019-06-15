@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Заметки</string>
+
+    <string name="hint_title">Title</string>
+    <string name="hint_text">Text of note</string>
+
+    <string name="title_save">Save</string>
+    <string name="title_edit">Edit</string>
+
+    <string name="error_empty_field">You must fill the field</string>
+    <string name="title_attach_image">Attach an image</string>
+
+    <string name="title_dialog_attachment_variants">Attach an image</string>
+
+    <string name="message_delete_image">Delete image?</string>
+    <string name="message_delete_note">Delete note?</string>
+
+    <string name="title_btn_yes">Yes</string>
+    <string name="title_btn_no">No</string>
+
+    <string-array name="attachment_variants">
+        <item>Choose from gallery</item>
+        <item>To take a photo</item>
+    </string-array>
+
+</resources>
