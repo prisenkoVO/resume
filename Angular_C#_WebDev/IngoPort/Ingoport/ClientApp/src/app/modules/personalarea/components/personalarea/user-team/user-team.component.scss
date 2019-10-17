@@ -1,0 +1,66 @@
+.shadow{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+  }
+.userCards {
+	padding: 0;
+	height: 32vh;
+	margin-top: 40px;
+}
+.title {
+	margin-left: 15px;
+	width: 94%;
+	margin-top: 10px;
+	padding: 0;
+}
+.team {
+	margin: 10px;
+    flex-direction: column;
+}
+
+.teammate{
+	width: 25%;
+	height: 80%;
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+
+.scrollbar
+{
+    width: 90%;
+	overflow-y: auto;
+}
+
+#style-1 {
+	&::-webkit-scrollbar-track {
+		border-radius: 10px;
+	}
+	&::-webkit-scrollbar {
+		height: 7px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: var(--gray-color);
+	}
+}
+
+p{
+	margin-bottom: 0px !important;
+}
+
+.picks{
+	width: 15px;
+	height: 15px;
+	margin: 5px;
+}
+.pickOfMentor{
+	background-color: rgb(255, 197, 110);
+}
+.pickOfIntern{
+	background-color: rgb(128, 179, 255);
+}
+
+.color{
+	color: var(--black-color)
+}

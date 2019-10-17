@@ -1,0 +1,28 @@
+<main class="col-12 mr-2 d-flex justify-content-center align-items-center p-3">
+  <!-- TODO: make optional text here -->
+  <h2 class="bot_title">Добро пожаловать в чат!</h2>
+  <div class="bot-window rounded text-center shadow d-flex flex-column align-items-center">
+   
+    <div class="bot-window__messages w-100 d-flex flex-column align-items-center position-relative">
+      
+      <app-message
+        class="w-100"
+        *ngFor="let message of messages"
+        [Message]="message"
+      >
+      </app-message>
+    
+    </div>
+
+
+    <app-message-input
+      [ngClass]="{'w-100': showCoffeeButtons}"
+      [coffeeStatus]="coffeeStatus"
+      [showCoffeeButtons]="showCoffeeButtons"
+      (sendMessage)="sendMessage($event)"
+      (toggleCoffeeButtons)="toggleCoffeeButtons()"
+    >
+
+    </app-message-input>
+  </div>
+</main>

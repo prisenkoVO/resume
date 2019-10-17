@@ -1,0 +1,37 @@
+<form class="auth d-flex flex-column justify-content-center align-items-center" [@changeState]="animateState">
+  
+  <input class="rounded" type="text" placeholder="Введите логин" name="email" autocomplete="off" 
+  #loginEmail 
+  required
+  [(ngModel)]="_emailInput"
+  >
+  <!-- <p class="alert alert-danger align-self-start"> Введите логин </p> -->
+
+  <br>
+  
+  <input class="rounded" type="password" placeholder="Введите пароль" name="password" 
+    autocomplete="off" 
+    #loginPassword
+    required 
+    [(ngModel)]="_passwordInput"
+    
+  >
+
+  <!-- <p class="alert alert-danger align-self-start"> Введите пароль </p> -->
+
+  <label class="d-flex align-items-center justify-content-center text-center w-100 pointer">
+    <p class="text-white m-0 w-50"> Запомнить меня </p>
+    <input type="checkbox" name="rememberMe" 
+      [style.width]="'5%'"
+      [(ngModel)]="remember"
+      checked="remember" 
+    >
+  </label>
+
+
+  <button class="rounded btn" type="submit" #authButton
+  (click)="auth()">Войти</button>
+
+  <a (click)="toggleForm($event)" class="register-link rounded fill-hover text-white fill-hover pointer">Зарегиcтрироваться</a>
+
+</form>

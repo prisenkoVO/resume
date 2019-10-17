@@ -1,0 +1,77 @@
+@keyframes toggleFormOff {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(0);
+    }
+  }
+  
+  @keyframes toggleFormOn {
+    from {
+      transform: scale(0);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .auth {
+    width: 30em;
+    padding: 10px;
+    margin: 30px auto;
+    box-sizing: border-box;
+    display: block;
+    //background-color: transparent;
+    border: none;
+    text-align: center;
+    transition: 300ms all ease;
+    a {
+      padding: 10px;
+      color: white;
+      text-decoration: underline;
+    }
+    input {
+      align-content: center;
+      padding: 12px 10px;
+      margin: 8px auto;
+      display: block;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+      transition: 300ms all ease;
+      outline: none;
+
+        &:focus {
+          outline: 2px solid var(--accent-color);
+        }
+    }
+    button {
+      width: 100% !important;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      transition: 300ms all ease;
+    }
+
+    .btn {
+      
+      color: var(--white-color);
+      background-color: var(--main-color);
+
+      &:hover {
+        background-color: var(--accent-color);
+      }
+    }
+
+    .fill-hover {
+      background-size: 200% 200%;
+      background-image: linear-gradient(to top, var(--prime-gradient) 50%, transparent 50%);
+      transition: 300ms all ease;
+
+        &:hover{
+          background-image: linear-gradient(to top, var(--prime-gradient) 51%, transparent 99%);
+        }
+    }
+  }

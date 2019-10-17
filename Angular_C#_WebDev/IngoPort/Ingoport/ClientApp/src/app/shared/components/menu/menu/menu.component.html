@@ -1,0 +1,15 @@
+<nav class="nav" #nav [ngClass]="{'is-active': _showMenu}">
+  <div class="previewNav">
+    <ul>
+      <li class="nav__item"><a routerLink="/news"><i class="fas previewNav-icon fa-home"></i></a></li>
+      <li class="nav__item"><a routerLink="/bot"><i class="fas previewNav-icon fa-robot"></i></a></li>
+      <li class="nav__item"><a routerLink="/questions_and_answers"><i class="fas previewNav-icon fa-question"></i></a></li>
+    </ul>
+  </div>
+  <div class="nav__trigger pointer" [ngClass]="{'is-active': _showMenu}" (click)="toggleMenu()">
+    <div class="bars"></div>
+  </div>
+
+  <app-menu-nav-content *ngIf="_showMenu" [isActive]="_showMenu">
+  </app-menu-nav-content>
+</nav>

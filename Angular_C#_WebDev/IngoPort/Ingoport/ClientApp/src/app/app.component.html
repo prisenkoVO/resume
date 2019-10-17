@@ -1,0 +1,25 @@
+<div 
+  class="app-component"
+>
+    <app-header
+    (SwitchTheme)="switchTheme($event)"
+    ></app-header>
+
+    <app-menu
+    ></app-menu>
+    
+    <div [@routeAnimations]="prepareRoute(outlet)" 
+         class="routerOutlet"
+    >
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+
+    <app-error-modal
+      *ngIf="_httpError"
+      (closeModal)="closeModalError()"
+      [error]="_httpErrorMessage"
+      [code]="_httpErrorCode"
+    ></app-error-modal>
+    
+    <app-footer></app-footer>
+</div>

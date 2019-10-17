@@ -1,0 +1,162 @@
+/* 
+*
+*
+* AUTH PAGE STYLES 
+*
+*/
+
+body {
+	background: black;
+}
+h1 {
+	text-align: center;
+	color: #0f54b9;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+.bgLogo {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	transition: 0.3s all ease;
+	background: black;
+	perspective: 40px;
+	img {
+		width: 50vw;
+		height: 100%;
+		animation: 0.9s linear 0s 1 normal none running;
+		background: black;
+		transition: 0.3s all ease;
+	}
+}
+.auth-content {
+	transition: 0.9s all ease;
+	opacity: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+input {
+	transition: 200ms all ease;
+	&:focus {
+		outline: 2px solid orange;
+	}
+}
+select {
+	transition: 200ms all ease;
+	&:focus {
+		outline: 2px solid orange;
+	}
+}
+input[name="lastname"] {
+	&::placeholder {
+		font-size: 11px;
+	}
+}
+input[type="file"] {
+	border: none;
+	color: white;
+	&:hover {
+		color: white;
+	}
+}
+.check {
+	cursor: pointer;
+	position: relative;
+	width: 18px;
+	height: 18px;
+	-webkit-tap-highlight-color: transparent;
+	transform: translate3d(0, 0, 0);
+	&:before {
+		content: "";
+		position: absolute;
+		top: -12px;
+		left: -15px;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background: rgba(34,50,84,0.03);
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+	svg {
+		position: relative;
+		z-index: 1;
+		fill: none;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke: #c8ccd4;
+		stroke-width: 1.5;
+		transform: translate3d(0, 0, 0);
+		transition: all 0.2s ease;
+		path {
+			stroke-dasharray: 60;
+			stroke-dashoffset: 0;
+		}
+		polyline {
+			stroke-dasharray: 22;
+			stroke-dashoffset: 66;
+		}
+	}
+	&:hover {
+		&:before {
+			opacity: 1;
+		}
+		svg {
+			stroke: #4285f4;
+		}
+	}
+}
+input[type="checkbox"] {
+	&:checked {
+		+ {
+			.check {
+				svg {
+					stroke: #4285f4;
+					path {
+						stroke-dashoffset: 60;
+						transition: all 0.3s linear;
+					}
+					polyline {
+						stroke-dashoffset: 42;
+						transition: all 0.2s linear;
+						transition-delay: 0.15s;
+					}
+				}
+			}
+		}
+	}
+}
+.show-more-none {
+	display: none !important;
+}
+
+@keyframes showBgLogo {
+	0% {
+	  transform: translate(-9000px);
+	}
+  
+	25%{
+	  transform: translate(-6750px);
+	}
+  
+	50%{
+	  transform: translate(-4500px);
+	}
+  
+	75% {
+	  transform: translate(-2250px);
+	}
+  
+	100% {
+	  transform: translate(0px);
+	}
+  }

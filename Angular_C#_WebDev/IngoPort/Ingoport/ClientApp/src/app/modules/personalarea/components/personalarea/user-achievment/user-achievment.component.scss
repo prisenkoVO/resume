@@ -1,0 +1,45 @@
+.shadow{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+  }
+.scrollbar
+{
+	height: 300px;
+    width: 100%;
+    margin-top: 40px;
+	overflow-y: auto;
+}
+
+#style-1 {
+	&::-webkit-scrollbar-track {
+		border-radius: 10px;
+	}
+	&::-webkit-scrollbar {
+		height: 7px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: var(--gray-color);
+	}
+}
+li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+	font-size: 25px !important;
+}
+.userCards {
+    width: 100%;
+	padding: 0;
+	height: 17vh;
+	margin-top: 40px;
+}
+
+ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline-start: 0px !important;
+    width: 100%
+}

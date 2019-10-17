@@ -1,0 +1,92 @@
+<form class="register" 
+  [@changeState]="animateState"
+>
+  <div class="d-flex input-group flex-row name-secondName w-100">
+    <div class="d-flex flex-row inputs w-100">
+      <div class="group d-flex flex-column w-100 mr-3">
+        <!--Name input-->
+            <input type="text" placeholder="Ваше имя" name="firstname" class="rounded mr-2" 
+            required autocomplete="off"
+            [(ngModel)]="user.firstName"
+            #firstName="ngModel">
+
+          <div [hidden]="firstName.valid || firstName.pristine"
+        class="alert alert-danger">
+          Заполните имя
+        </div>
+      </div>
+
+
+    
+      <div class="group d-flex flex-column w-100">
+         <!--Second name input-->
+          <input type="text" placeholder="Ваша фамилию" name="lastname" class="rounded" 
+          required autocomplete="off"
+          [(ngModel)]="user.lastName"
+          #lastName="ngModel">
+
+          <div [hidden]="lastName.valid || lastName.pristine"
+          class="alert alert-danger">
+            Заполните фамилию
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--Email and password    -->
+  <div class="input-group mt-3 d-flex flex-column justify-content-center align-items-center w-100">
+
+    <!--Email input    -->
+    <input type="email" placeholder="Введите email" name="email" class="rounded" required autocomplete="off"
+      [(ngModel)]="user.email"
+    >
+
+    <!--Password input    -->
+    <input type="password" placeholder="Введите пароль" name="password" class="rounded" required autocomplete="off"
+      [(ngModel)]="user.password"
+    >
+  </div>
+
+<!-- 
+  <div class="roles">
+    <app-role-checkbox
+      *ngFor="let role of roles"
+      [name]="role.name"
+      [Id]="role.Id"
+      [checked]="role.checked"
+    >
+
+    </app-role-checkbox>
+  </div> -->
+
+  <!-- <div class="roles w-100 d-flex justify-content-center align-items-center rounded">
+    <div class="role p-3 w-50">
+      <label class="p-3">
+        <span>Ментор</span>
+        <input type="checkbox" name="" id="">
+      </label>
+    </div>
+
+    <div class="role p-3 w-50">
+        <label>
+          <span>Стажер</span>
+          <input type="checkbox" name="" id="">
+        </label>
+      </div>
+
+      
+      <div class="role p-3 w-50">
+          <label>
+            <span>Модератор</span>
+            <input type="checkbox" name="" id="">
+          </label>
+        </div>
+    
+  </div> -->
+
+  <button class="rounded btn" type="button" (click)="registerUser()">Зарегистрироваться</button> <br>
+  <a (click)="toggleForm()" class="rounded fill-hover">
+    Уже есть аккаунт?</a>
+</form>

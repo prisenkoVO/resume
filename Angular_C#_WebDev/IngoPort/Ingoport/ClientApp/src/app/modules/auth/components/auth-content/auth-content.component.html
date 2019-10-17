@@ -1,0 +1,11 @@
+<ng-container *ngIf="showAuthForm else register">
+  <app-auth-form [showAuth]="showAuthForm" (ToggleForm)="ToggleForm()" [animateState]="authAnim" class="auth-form">
+  </app-auth-form>
+</ng-container>
+
+
+
+<ng-template #register>
+  <app-register-form [showRegister]="!showAuthForm" (ToggleForm)="ToggleForm()" [animateState]="regAnim"
+    class="register-form"></app-register-form>
+</ng-template>

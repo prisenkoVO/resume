@@ -1,0 +1,29 @@
+<div class="news d-flex flex-column row align-items-start p-3">
+  <button class="button element-hover rounded submitPost btn col-6 w-100" type="button" (click)="toggleShowForm()">
+    {{ _showFormMessage }} </button>
+
+
+  <form class="news-form rounded col-12" *ngIf="_showForm">
+    <h4>Поделись своими впечатлениями !</h4>
+    <span class="news-form__title emoji-toggle w-100">
+      <input type="text" name="news-title" placeholder="Заголовок новости" class="rounded w-100 shadow element-hover"
+        autocomplete="off" maxlength="19" #postTitle [(ngModel)]="_postTitle" />
+      <label class="btn postPhoto pointer">
+        <span><i class="far fa-image"></i></span>
+        <input type="file" name="photo" id="" class="d-none" (change)="readFile($event)">
+
+      </label>
+    </span>
+
+    <quill-editor class="w-100 rounded" (onContentChanged)="editorEvent($event)"></quill-editor>
+    <div class="d-flex justify-content-start w-100">
+      <div class="minImg m-1" *ngIf="fileToPreview">
+        <img [src]="fileToPreview" width="200px" height="200px">
+        <div class="hint"><i class="m-1 fas fa-times" (click)="deletePhoto()"></i></div>
+      </div>
+    </div>
+    <button type="button" class="element-hover send btn" (click)="suggestPost(postTitle.value, _postText)">
+      Создать
+    </button>
+  </form>
+</div>

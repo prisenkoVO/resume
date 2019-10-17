@@ -1,0 +1,19 @@
+<div class="auth-page" #authPage (mousemove)="getMousePos($event)">
+  <!--  Logo on the back of the page -->
+  <div class="bgLogo" id="bgContainer" [ngStyle]="bgLogoStyle">
+    <img [style.transform]="bgTransform" src="assets/images/final.svg" class="bgLogo-image w-75 h-75" width="720">
+  </div>
+
+  <!-- Preloader for auth    or Register-->
+  <app-preloader [showFullPreloader]="showPreloader"></app-preloader>
+
+
+  <app-auth-content 
+    [ngStyle]="authContentStyle" 
+    [showAuthForm]="showAuthForm" 
+    class="auth-content"
+    
+  >
+
+  </app-auth-content>
+</div>

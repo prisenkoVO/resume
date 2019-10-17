@@ -1,0 +1,21 @@
+<div class="shadow userCards d-flex flex-column align-items-center rounded">
+    <div class="title">
+        <h1 class="color">Команда {{TeamName}}</h1>
+    </div>
+    <div class="d-flex justify-content-around">
+        <div class="d-flex align-items-center">
+            <div class="picks pickOfMentor rounded">
+            </div>
+            <p class="color">- Ментор</p>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="picks pickOfIntern rounded">
+            </div>
+            <p class="color">- Стажер</p>
+        </div>
+    </div>
+    <div class="scrollbar card-deck team d-flex justify-content-around h-100 align-items-center" id="style-1">
+        <app-teammate-card class="teammate" *ngFor="let team of Team" [FirstName]="team.FirstName"
+            [LastName]="team.LastName" [RoleId]="team.RoleId" [Photo]="team.Photo"></app-teammate-card>
+    </div>
+</div>

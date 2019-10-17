@@ -1,0 +1,29 @@
+.shadow{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+  }
+.cardAchievment{
+    margin: 10px;
+    width: 90%;
+    height: 100%;
+}
+
+p{
+    margin: 5px;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+	font-size: 25px !important;
+}
+
+ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline-start: 0px !important;
+    width: 100%
+}

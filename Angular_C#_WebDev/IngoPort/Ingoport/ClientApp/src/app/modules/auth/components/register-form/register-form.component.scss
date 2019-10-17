@@ -1,0 +1,161 @@
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30em;
+    padding: 10px;
+    margin: 30px auto;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    transition: 300ms all ease;
+    a {
+      padding: 10px;
+      color:var(--white-color);
+      text-decoration: underline;
+    }
+    input {
+      align-content: center;
+      padding: 12px 10px;
+      margin: 8px auto;
+      display: block;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100% !important;
+      margin-top: 10px;
+      margin-bottom: 15px;
+
+      &.btn {
+        background-color: var(--main-color);
+        color: var(--white-color);
+
+          &:hover {
+            background-color: var(--accent-color);
+          }
+      }
+    }
+
+    .fill-hover {
+      background-size: 200% 200%;
+      background-image: linear-gradient(to top, var(--prime-gradient) 50%, transparent 50%);
+      transition: 300ms all ease;
+
+        &:hover{
+          background-image: linear-gradient(to top, var(--prime-gradient) 51%, transparent 99%);
+        }
+    }
+    
+    .name-secondName {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      .inputs {
+        display: flex;
+      }
+    }
+}
+
+.roles {
+  
+  
+  background-color: var(--white-color);
+  padding: 20px;
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.label-cbx {
+	user-select: none;
+	cursor: pointer;
+  margin-bottom: 0;
+
+
+	input {
+		&:checked {
+			+ {
+				.checkbox {
+					border-color: var(--blue-color);
+					svg {
+						path {
+							fill: var(--blue-color);
+						}
+						polyline {
+							stroke-dashoffset: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	&:hover {
+		.checkbox {
+			svg {
+				path {
+					stroke-dashoffset: 0;
+				}
+			}
+		}
+	}
+	.checkbox {
+    position: relative;
+		float: left;
+		margin-right: 8px;
+		width: 20px;
+		height: 20px;
+		border: 2px solid #C8CCD4;
+		border-radius: 3px;
+		svg {
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			path {
+				fill: none;
+				stroke: var(--blue-color);
+				stroke-width: 2;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+				stroke-dasharray: 71px;
+				stroke-dashoffset: 71px;
+				transition: all .6s ease;
+			}
+			polyline {
+				fill: none;
+				stroke: #FFF;
+				stroke-width: 2;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+				stroke-dasharray: 18px;
+				stroke-dashoffset: 18px;
+				transition: all .3s ease;
+			}
+		}
+	}
+	>span {
+		pointer-events: none;
+		vertical-align: middle;
+	}
+}
+.invisible {
+	position: absolute;
+	z-index: -1;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}

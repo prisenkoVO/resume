@@ -1,0 +1,12 @@
+<div class="nav__content" [ngClass]="{'is-active': isActive}">
+  <nav class="nav__list">
+    <ul>
+      <li class="nav__item"><a routerLink="/news">Главная</a></li>
+      <li class="nav__item"><a routerLink="/bot">Ингобот</a></li>
+      <li class="nav__item"><a routerLink="/questions_and_answers">Вопросы и ответы</a></li>
+    </ul>
+  </nav>
+  <div class="d-flex">
+    <li class="nav__item small"><a routerLink="/auth">Выйти <i class="fas fa-sign-out-alt"></i></a></li>
+  </div>
+</div>

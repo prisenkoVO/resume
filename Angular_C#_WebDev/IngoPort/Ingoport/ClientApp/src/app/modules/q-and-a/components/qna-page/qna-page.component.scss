@@ -1,0 +1,28 @@
+.topics {
+    margin-top: 10vh;
+}
+
+ul {   
+    list-style-type: none;
+    background: var(--main-color);
+    top: 5vh;
+    right: 0;
+
+    li {
+        color: var(--white-color);
+        margin-top: 15px;
+    }
+}
+
+.topic {
+    text-align: end;
+}
+
+.questions {
+    margin-top: 10vh;
+    margin-right: 37vw;
+}
+
+.main {
+    padding-left: 7vw;
+}

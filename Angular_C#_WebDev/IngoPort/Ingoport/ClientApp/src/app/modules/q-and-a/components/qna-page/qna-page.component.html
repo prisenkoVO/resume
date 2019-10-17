@@ -1,0 +1,27 @@
+<div class="w-100 d-flex justify-content-between m-0 main">
+    
+    <div 
+        class="questions d-flex flex-column justify-content-center align-items-center"
+        *ngIf="showQuestions"
+    >
+        <h3> {{ question.Question }} </h3>
+        <h5 class="w-50"> {{ question.Answer }} </h5>
+    </div>
+
+    <app-preloader
+    [showLittlePreloader]="false"
+    [showFullPreloader]="showPreloader"
+    ></app-preloader>
+
+    <ul 
+    class="topics p-0 d-flex flex-column justify-content-end rounded position-fixed"
+    >
+        <li
+        class="btn rounded topic element-hover pointer"
+        *ngFor="let topic of Topics"
+        (click)="changeQuestions(topic.Id)"
+        >
+            {{ topic.Title }}
+        </li>
+    </ul>
+</div>

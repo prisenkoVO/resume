@@ -1,0 +1,99 @@
+$primary: #9ac6ac;
+$primary-ultralight: mix(white, $primary, 80%);
+$primary-light: mix(white, $primary, 25%);
+$primary-dark: mix(black, $primary, 25%);
+$primary-ultradark: mix(black, $primary, 80%);
+$black: #222222;
+$white: #eeeeee;
+
+$ease-in-out-cubic: cubic-bezier(0.645,  0.045, 0.355, 1.000);
+$cubic-transition: 0.55s $ease-in-out-cubic;
+
+$bar-length: 28px;
+$bar-thickness: 4px;
+$nav-item-delay: 0.05s;
+$nav-width: 3.75rem;
+// -----
+
+
+.nav__content {    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 1200px;
+    padding: 6rem $nav-width 1rem ($nav-width - 1rem);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    transition: 0s linear 0.25s;
+    
+    &.is-active {
+        visibility: visible;
+        opacity: 1;
+        transition: 0s linear;
+                
+        .nav__item {
+            a {
+                opacity: 1;
+                transform: translateY(0);
+                cursor: pointer;
+                color: var(--white-color);
+                transition: {
+                    property: transform, opacity, color;
+                    duration: 0.55s, 0.55s, 0.3s;
+                    timing-function: $ease-in-out-cubic, ease-in-out, ease-in-out;            
+                }
+
+                &:hover {
+                    color: var(--accent-color);
+                }
+            }
+        }
+        
+        .nav__list {
+            .nav__item {
+                @for $num from 1 through 9 {
+                    &:nth-of-type(#{$num}) {
+                        a {
+                            transition-delay: $nav-item-delay * ($num - 1), $nav-item-delay * ($num - 1), 0s;
+                        }
+                    }            
+                }
+            }
+        }
+    }
+}
+
+.nav__list {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.nav__item {
+    overflow: hidden;
+    
+    a {
+        display: inline-block;
+        padding: 1rem;
+        color: var(--white-color);
+        text-decoration: none;
+        font-size: 2em;
+        font-weight: bold;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: 0.5s $ease-in-out-cubic;
+        will-change: transform, opacity;
+
+        &:hover {
+            color: white;
+        }
+    }
+}

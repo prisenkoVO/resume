@@ -1,0 +1,59 @@
+<div *ngIf="_showInput else inputs" class="w-100 d-flex flex-column justify-content-center">
+  <div class="userCards shadow mt-0 d-flex flex-column align-items-center rounded">
+    <div class="d-flex w-100 h-100 justify-content-end">
+      <i class=" color {{classOfButton}}" (click)="toggleShowInput()"></i>
+    </div>
+    <div class="d-flex w-100">
+      <div class="title d-flex align-items-center justify-content-between">
+        <img src="{{Photo}}" class="img-responsive rounded fit-image userPhoto" />
+      </div>
+      <ul class="intern-contacts">
+        <!--Ссылки для гостевого варианта страницы-->
+        <li class="data color ">Почта:<a href="mailto://" class="mailLink">
+            <p class="color">{{Email}}</p>
+          </a>
+        </li>
+        <li class="data color">Телефон:<a href="tel://" class="callLink">
+            <p class="color">{{Phone}}</p>
+          </a>
+        </li>
+        <li class="data color">Дата рождения:
+          <p class="color">{{Birth|date:'yyyy-MM-dd'}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<ng-template #inputs>
+  <div class="userCards mt-0 shadow d-flex flex-column align-items-center rounded">
+    <div class="d-flex w-100 h-100 justify-content-end">
+      <i class="{{classOfButton}}" (click)="toggleShowInput()"
+        (click)="suggestInfo(photo.src, email.value, phone.value, dateBirth.value)"></i>
+    </div>
+    <div class="d-flex w-100">
+    <div class="title d-flex align-items-center justify-content-between">
+      <img src="{{Photo}}" class="img-responsive rounded fit-image userPhoto" #photo />
+      <label>
+        <input type="file" name="photo" id="" class="d-none" (change)="readFile($event)">
+        <div class="hint">
+          <!--<i class="fas fa-times"></i>-->Загрузить
+        </div>
+      </label>
+    </div>
+    <ul class="intern-contacts">
+      <!--Ссылки для гостевого варианта страницы-->
+      <li class="color">Почта:
+        <p class="w-50 color"> <input type="email" value="{{Email}}" #email> </p>
+      </li>
+      <li class="color">Телефон:
+        <p class="w-50 color"> <input type="tel" value="{{Phone}}" #phone> </p>
+      </li>
+      <li class="color">Дата рождения:
+        <p class="w-50 color"> <input type="date" min="1970-01-01" max="{{ currentDate | date: 'yyyy-MM-dd' }}"
+            value="{{Birth|date:'yyyy-MM-dd'}}" #dateBirth> </p>
+      </li>
+    </ul>
+    </div>
+  </div>
+</ng-template>

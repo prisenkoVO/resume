@@ -1,0 +1,36 @@
+
+  .showAllUsers{
+    background: #eff8ff;
+    color: #444444 !important;
+    margin-top: 0.5em;
+    width: 100%;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+  
+  .hideAllUsers{
+    background: #eff8ff;
+    color: #444444 !important;
+    margin-top: 0.5em;
+    width: 98%;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+  
+  .showAllUsers:hover {
+    background: #b7dbf7;
+    color: #fff !important;
+    cursor: pointer;
+  }
+  
+  .hideAllUsers:hover {
+    background: #b7dbf7;
+    color: #fff !important;
+    cursor: pointer;
+  }
+
+  .shadow{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+  }

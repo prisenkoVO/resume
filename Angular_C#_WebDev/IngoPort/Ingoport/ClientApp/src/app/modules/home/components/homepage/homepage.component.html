@@ -1,0 +1,13 @@
+<main class="mr-2 d-flex justify-content-center align-items-center flex-column pt-5">
+  <app-suggest-post class="w-50"
+    (newPost)="createPost($event)"
+  >
+
+  </app-suggest-post>
+  <app-preloader *ngIf="_showNewsPreloader" [showFullPreloader]="false" [showLittlePreloader]="true"></app-preloader>
+
+  <app-news class="w-50 mt-5" [news]="_news"></app-news>
+
+  <app-to-top-button>
+  </app-to-top-button>
+</main>

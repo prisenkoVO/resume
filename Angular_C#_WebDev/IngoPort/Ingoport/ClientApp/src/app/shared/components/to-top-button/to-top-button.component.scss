@@ -1,0 +1,33 @@
+.back_to_top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35px;
+	position: fixed;
+	bottom: 2%;
+	right: 2%;
+	z-index: 9999;
+	width: 12vw;
+	height: 5vh;
+	background: var(--black-color);
+	color: var(--white-color);
+	border-radius: 6px;
+	box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+	&:hover {
+		background: var(--accent-color);
+		color: var(--black-color);
+		cursor: pointer;
+	}
+
+	a {
+		color: var(--black-color);
+
+		&:hover{
+			color: var(--white-color);
+		}
+	}
+}
+
+.back_to_top-text {
+	font-size: 45px;
+}

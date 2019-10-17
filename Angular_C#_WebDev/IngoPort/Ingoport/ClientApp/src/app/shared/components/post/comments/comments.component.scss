@@ -1,0 +1,11 @@
+button {
+    color: var(--white-color);
+    background: var(--main-color);
+    transition: 300ms all ease;
+    border:none;
+    border-radius: 6px;
+
+    &:hover {
+        background: var(--accent-color);
+    }
+}

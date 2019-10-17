@@ -1,0 +1,28 @@
+<div class="preloader">
+    <!-- Full page preloader -->
+    <div
+        *ngIf="showFullPreloader"
+        [ngStyle]="fullPagePreloaderStyle"
+        class="fullPagePreloader 
+        modal-preloader position-fixed justify-content-center
+        align-items-center d-flex
+        "
+    >
+        <div class="modal-preloader__spinner p-5 bg-white rounded">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <div
+        *ngIf="showLittlePreloader"
+        class="littlePreloader"
+    >
+    <div class="modal-preloader__spinner p-5 bg-white rounded">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    </div>
+</div>

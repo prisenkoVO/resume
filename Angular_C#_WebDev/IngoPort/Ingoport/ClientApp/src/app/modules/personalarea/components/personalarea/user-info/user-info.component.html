@@ -1,0 +1,18 @@
+<ul class="user-name-info">
+  <li>
+    <div class="d-flex">
+      <p class="color">{{FirstName}}</p>
+      <p class="color">{{LastName}}</p>
+    </div>
+  </li>
+  <li>
+    <p class="color">Должность:</p>
+    
+    <div ngSwitch="{{RoleId}}">
+        <p *ngSwitchCase="'1'" class="color">Модератор</p>
+        <p *ngSwitchCase="'2'" class="color">Ментор</p>
+        <p *ngSwitchCase="'3'" class="color">Стажер</p>
+        <p *ngSwitchDefault></p>
+      </div>
+  </li>
+</ul>

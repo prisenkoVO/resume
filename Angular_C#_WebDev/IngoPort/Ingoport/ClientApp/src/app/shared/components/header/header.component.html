@@ -1,0 +1,38 @@
+<header class="header shadow">
+    <ul class="header__list">
+      <li class="ml-5">
+        <div>
+          <a routerLink="/news" class="flex-center pointer">
+            <img src="assets/images/final.svg" alt="INGOPORT" class="header__list-logo" width="320">
+          </a>
+        </div>
+
+        <!-- <div class="box">
+          <div class="header__list-search-input">
+            <i class="fas fa-search"></i>
+
+            <input type="search" id="search" placeholder="Search..." />
+          </div>
+        </div> -->
+      </li>
+      <li>
+        <i class="fas mr-2"
+        [ngClass]="_themeIconClass"
+        ></i>
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
+            (input)="switchTheme()"
+          >
+          <label class="onoffswitch-label" for="myonoffswitch">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+          </label>
+        </div>
+        <a routerLink="/personal_area">
+          <div class="avatar-icon rounded">
+            <img [src]="avatar" width="50" height="50" />
+         </div>
+        </a>
+      </li>
+    </ul>
+  </header>

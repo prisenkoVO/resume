@@ -1,0 +1,24 @@
+.teammate {
+    width: 100%;
+	font-size: 15px !important;
+	margin-left: 0px !important;
+}
+a {
+	width: 25% !important;
+	&:hover{
+		opacity: 0.8;
+		cursor: pointer;
+	}
+}
+
+p{
+	margin-bottom: 0px;
+}
+
+.card-body{
+	padding: 0px !important;
+}
+
+.card-img-top{
+	height: 120px;
+}

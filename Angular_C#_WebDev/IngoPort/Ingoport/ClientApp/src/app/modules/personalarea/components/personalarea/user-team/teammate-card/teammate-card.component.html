@@ -1,0 +1,16 @@
+<a routerLink='#' ngSwitch="{{RoleId}}">
+  <div class="teammate card" *ngSwitchCase="'2'" style="background-color: rgb(255, 197, 110)">
+    <img class="card-img-top" [src]="getPhoto()">
+    <div class="card-body">
+      <p>{{FirstName}}</p>
+      <p>{{LastName}}</p>
+    </div>
+  </div>
+  <div class="teammate card" *ngSwitchCase="'3'" style="background-color: rgb(128, 179, 255)">
+    <img class="card-img-top" [src]="getPhoto()">
+    <div class="card-body">
+      <p>{{FirstName}}</p>
+      <p>{{LastName}}</p>
+    </div>
+  </div>
+</a>

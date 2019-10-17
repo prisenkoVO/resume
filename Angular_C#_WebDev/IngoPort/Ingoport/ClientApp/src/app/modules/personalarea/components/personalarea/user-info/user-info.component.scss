@@ -1,0 +1,21 @@
+li {
+	display: flex;
+	justify-content: space-between;
+	font-size: 25px !important;
+}
+p {
+	margin-left: 5px;
+}
+.user-name-info {
+	color: var(--black-color);
+    padding-inline-start: 0px !important;
+	margin-bottom: 30px;
+	li {
+		margin: 5px;
+		font-size: 36px;
+	}
+}
+
+.color{
+	color:var(--black-color);
+}

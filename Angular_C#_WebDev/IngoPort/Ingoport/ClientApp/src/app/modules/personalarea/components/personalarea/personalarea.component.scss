@@ -1,0 +1,87 @@
+.container-fluid{
+	margin-top: 5vh;
+}
+li {
+	display: flex;
+	font-size: 25px !important;
+}
+p {
+	margin-left: 5px;
+}
+.header__list {
+	margin-block-start: 0;
+}
+.container {
+	display: flex;
+}
+
+.fit-image {
+	width: 70%;
+	object-fit: contain;
+	max-height: 400px;
+}
+.userCards {
+	padding: 0;
+	height: 25vh;
+	margin-top: 40px;
+	background-color: var(--white-color);
+	border: 0.5px solid var(--black-color);
+}
+.title {
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	padding: 0;
+}
+
+.team {
+	margin: 10px;
+}
+.teammate {
+	height: 155px;
+	font-size: 18px !important;
+	margin-left: 0px !important;
+}
+.intern-contacts {
+	li {
+		margin: 20px;
+		font-size: 18px !important;
+		justify-content: space-between;
+	}
+	align-self: flex-start;
+	padding-inline-start: 0px !important;
+	width: 100%;
+}
+
+a {
+	width: 25%;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+
+/*Shadow for divs*/
+.effect3
+{
+  position: relative;
+}
+.effect3:before
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}

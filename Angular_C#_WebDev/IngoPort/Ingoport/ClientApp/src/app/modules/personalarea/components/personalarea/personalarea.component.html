@@ -1,0 +1,34 @@
+<main class="col-11">
+  <div class="container-fluid">
+    <div class="row" *ngIf='_personalarea'>
+      <div class="col-md-5 offset-md-2">
+        <app-user-contacts
+        [Photo]="_personalarea.Photo"
+        [Email]="_personalarea.Email"
+        [Phone]="_personalarea.Phone"
+        [Birth]="_personalarea.Birth"></app-user-contacts>
+        <app-user-task 
+        [Team]="_team"
+        [Id]="_personalarea.RoleId"
+        [Tasks]="_tasks" 
+        (newTask)="createPost($event)"></app-user-task>
+      </div>
+      <div class="col-md-4 offset-md-0.5">
+        <app-user-info
+        [FirstName]="_personalarea.FirstName"
+        [LastName]="_personalarea.LastName"
+        [RoleId]="_personalarea.RoleId"></app-user-info>
+        <!-- Кнопки Редактировать и Выход <app-manage-button></app-manage-button> -->
+        <app-user-progress
+        [Comment]="_rate.Comment"
+        [Likes]="_rate.Likes"></app-user-progress>
+        <app-user-team 
+        [Team]="_team"
+        [TeamName]="_personalarea.Team"></app-user-team>
+      </div>
+    </div>
+  </div>
+  <app-preloader></app-preloader>
+  <!--Button "go to top"-->
+  <app-to-top-button></app-to-top-button>
+</main>

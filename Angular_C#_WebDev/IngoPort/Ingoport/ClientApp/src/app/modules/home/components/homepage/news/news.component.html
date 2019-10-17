@@ -1,0 +1,10 @@
+<div class="w-100">
+  <ul class="p-0">
+    <li *ngFor="let post of news">
+      <app-post 
+      [post]="post"
+      (deletePost)="deletePost($event)">
+      </app-post>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,73 @@
+/* Inter card start*/
+/* Intern card end*/
+main {
+	align-items: center;
+}
+.intern {
+	width: 85%;
+}
+.intern-card {
+	background-color: white;
+	box-shadow: 0 8px 16px -8px rgba(0,0,0, 0.4);
+	border-right: none;
+	border-left: none;
+	justify-content: space-between;
+	&:hover {
+		box-shadow: 12px;
+		background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+	}
+}
+.flexRow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	i {
+		margin-left: 3px;
+		width: 60%;
+		font-size: 52px;
+	}
+}
+.forward {
+	margin-left: 45%;
+	outline: none;
+	margin-right: 12px;
+}
+.text_position {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	margin-left: 25px;
+}
+.tabs {
+	margin-bottom: 16px;
+	margin-top: 10px;
+}
+.intern-card__text {
+	font-size: medium;
+}
+.intern-card__name {
+	font-size: larger;
+	font-weight: 600;
+}
+.intern-card__body {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+	border: 1px solid black;
+}
+.intern-card__notify {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: red;
+	text-align: center;
+	justify-content: space-between;
+	font-size: xx-small;
+	color: white;
+}
+@media only screen and (max-width: 420px) {
+	body {
+		background-color: red;
+	}
+}

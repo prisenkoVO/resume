@@ -1,0 +1,36 @@
+<div>
+    <app-comment
+        *ngFor="let comment of Comments"
+        [text]="comment.Text"
+        [userId]="comment.Id"
+        >
+
+    </app-comment>
+    <form class="d-flex flex-column align-items-center justify-content-center w-100 mt-5">
+        
+        <textarea 
+            cols="30"
+            rows="10"
+            name="comment" class="w-100 rounded" 
+            required 
+            placeholder="Добавьте комментарий"
+            autocomplete="off"
+            #commentValue
+            [(ngModel)]="commentText"
+        ></textarea>
+        
+
+        <p 
+            class="alert alert-danger"
+            *ngIf="commentValue.invalid || commentValue.touched || commentValue.dirty"
+        > Комментарий не должен быть пустым </p>
+        
+        <button type="button"
+            class="btn rounded mt-3 element-hover"
+            (click)="onWriteComment()"
+        >
+            Добавить комментарий
+        </button>
+    </form>
+
+</div>

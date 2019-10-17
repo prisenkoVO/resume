@@ -1,0 +1,72 @@
+<div >
+  <div class="d-flex flex-column">
+    <div class="w-100 d-flex">
+      <div class="container">
+        <input id="modal" type="checkbox">
+        <!-- <div *ngIf="RoleId===2"> -->
+        <label class="modal-button" for="modal">
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        </label>
+        <label class="modal-background" for="modal"></label>
+        <!-- </div> -->
+        <div class="modal-content">
+          <label class="modal-close" for="modal">&#10005;</label>
+          <h2>Создание задачи</h2>
+          <div>
+            <h4>Заголовок</h4>
+            <input class="w-100" type="text" placeholder="Заголовок" #taskTitle>
+            <hr>
+          </div>
+          <div>
+            <h4>Заказчик</h4>
+            <input class="w-100" type="text" placeholder="Заказчик" #taskOwner>
+            <hr>
+          </div>
+          <div>
+            <h4>Текст задачи</h4>
+            <textarea class="w-100" placeholder="Введите текст..." #taskBody></textarea>
+            <hr>
+          </div>
+          <div class="d-flex justify-content-between">
+            <!--<app-user-selection *ngFor="let team of Team" [FirstName]="team.FirstName"
+             [LastName]="team.LastName" [Photo]="team.Photo"></app-user-selection> -->
+            <div>
+              <h4>Стажер</h4>
+              <select #taskIntern>
+                <option value='{{team.Id}}' *ngFor="let team of Team">
+                  {{team.LastName}} {{team.FirstName}}
+                </option>
+              </select>
+            </div>
+            <div>
+              <h4>Дата выполнения</h4>
+              <input type="date" #taskDeadLine>
+            </div>
+            <div>
+              <h4>Приоритет</h4>
+              <select #flagColor>
+                <option>Не указано</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex row-reverse">
+            <label class="modal-content-button" for="modal"
+              (click)="suggestTask(taskTitle.value, taskOwner.value, taskBody.value, taskIntern.value, taskDeadLine.value, flagColor.value)">OK</label>
+            <label class="modal-content-button" for="modal">Отмена</label>
+          </div>
+        </div> <!-- .modal-content -->
+      </div> <!-- .modal-container -->
+    </div>
+    <div class="scrollbar shadow d-flex flex-column align-items-center rounded" id="style-1">
+      <ul style="display: flex; flex-direction: column;">
+        <app-user-card-task *ngFor="let tasks of Tasks" [Title]="tasks.Title" [Author]="tasks.author"
+          [Text]="tasks.TaskBody" [Owner]="tasks.Owner" [dateTime]="tasks.DateTime" [deadLine]="tasks.Deadline"
+          [Flag]="tasks.FlagColor" [Id]="tasks.Id">
+        </app-user-card-task>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="w-100 d-flex"
+    [ngClass]="{'flex-row-reverse': Message.isClientMessage}"
+>
+
+    <div class="message text-white m-3 p-1 rounded shadow-lg"
+        #message
+        
+        [ngClass]="
+            { 
+                'client-message' : Message.isClientMessage , 
+                'client-message-last' : (Message.isLastMessage && Message.isLastMessage),
+                'bot-message': !Message.isClientMessage,
+                'bot-message-last': (Message.isLastMessage && !Message.isClientMessage)
+            }"
+    >
+    </div>
+</div>

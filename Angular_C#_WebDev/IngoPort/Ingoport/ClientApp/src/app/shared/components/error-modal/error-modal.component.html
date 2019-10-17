@@ -1,0 +1,13 @@
+<div #errorModal class="modal-error d-flex justify-content-center align-items-center flex-column">
+    <div class="errorContainer rounded bg-white p-5">
+        <h4> Произошла ошибка </h4>
+        <p> {{ error }} </p>
+        <p>Код ошибки: {{ code }} </p>
+ 
+        <button type="button" 
+        class="button btn rounded"
+        (click)="onCloseModal()">
+            ОК
+        </button>
+    </div>
+</div>

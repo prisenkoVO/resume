@@ -1,0 +1,139 @@
+
+.shadow{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+  }
+
+  .personalLogo{
+    border-radius: 180px;
+    border: 2px solid #337AB7;
+    display: flex;
+    width: 10vw;
+    height: 20vh;
+    cursor: pointer;
+    }
+    
+    .personalLogo:hover{
+      opacity: 0.8;
+    }
+  
+  .personalInfo__leftSide{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .personalInfo__rightSide{
+    display: flex;
+    width: 70%;
+    height: 100%;
+  }
+  
+  .list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 30px 30px 30px;
+    padding:0;
+    list-style: none;
+    counter-reset: li;
+  }
+  .list li {
+    border: 2px solid #337AB7;
+    background: #EBF3FA;
+    position: relative;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 16px 10px;
+    width: 100%;
+  }
+  .list li:hover {
+    z-index: 1;
+    cursor: pointer;
+  }
+  .list li:before {
+    border: 2px solid #337AB7;
+    border-radius: 6px;
+    position: absolute;
+    top: 27%;
+    right: 5%;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #337AB7;
+    background: rgb(253, 250, 247);
+    counter-increment: li;
+    content: counter(li);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .list li:hover:before {
+    background: #337AB7;
+    color: #FFF;
+    -webkit-transform: translate(-12px, 0);
+    -ms-transform: translate(-12px, 0);
+    -o-transform: translate(-12px, 0);
+    transform: translate(-12px, 0);
+  }
+  .list li:after {
+    content: "";
+    position: absolute;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: width;
+    transition-property: width;
+    z-index: -1;
+    background: #FFF;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0;
+    border-radius: 6px;
+  }
+  .list li:hover:after {
+    width: 100%;
+  }
+  /*User card*/
+  .userCard{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .userCard:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    box-shadow:
+      1px 1px #337AB7,
+      2px 2px #337AB7,
+      3px 3px #337AB7,
+      4px 4px #337AB7,
+      5px 5px #337AB7;
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  
+  .userPhoto{
+    height: 6em;
+    border-radius: 180px;
+  }
+  
+  .userInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+  }
+  
+  .userList {
+    margin: 10px 10px 10px 10px !important;
+    width: 50%;
+  }
+  /*User card*/
+  

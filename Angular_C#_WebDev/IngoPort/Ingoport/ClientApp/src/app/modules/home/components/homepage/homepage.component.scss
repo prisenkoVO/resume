@@ -1,0 +1,13 @@
+/* STYLES FOR MAIN PAGE */
+.main {
+	padding-top: 15vh;
+	width: 100vw;
+}
+
+.content_container {
+	display: flex;
+}
+
+html {
+	background: var(--mainBg-color) !important;
+}

@@ -1,0 +1,92 @@
+.topChart{
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .shadow{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+  }
+  
+  /*Пьедистал*/
+  .mainSource{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 80%;
+    height: 60%;
+  }
+  
+  .chartBlock{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    width: 33%;
+    background: #337AB7;
+    border: solid 1px #337AB7;
+  
+  }
+  
+  [data-tooltip] {
+    position: relative; /* Относительное позиционирование */ 
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; top: 0; /* Положение подсказки */
+    color: #000000; /* Цвет текста */
+    font-size: 12px !important;
+    padding: 0.5em; /* Поля вокруг текста */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+   } 
+  
+   [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2.5em; /* Положение подсказки */
+   }
+  
+  .thirdPlace{
+    height: 40%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  
+    .thirdPlace:hover{
+      cursor: pointer;
+      border: solid 1px #FFF;
+    }
+  
+  
+  .secondPlace{
+    height: 60%;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  
+    .secondPlace:hover{
+      cursor: pointer;
+      border: solid 1px #FFF;
+    }
+  
+  .firstPlace{
+    height: 80%;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  
+    .firstPlace:hover{
+      cursor: pointer;
+      border: solid 1px #FFF;
+    }
+  
+  .guestPhoto{
+    border-radius: 180px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  /*Пьедистал конец*/

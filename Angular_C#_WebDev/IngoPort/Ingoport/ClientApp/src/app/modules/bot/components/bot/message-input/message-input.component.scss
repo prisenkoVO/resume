@@ -1,0 +1,94 @@
+.bot-window__input,
+.coffeeButtons {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+
+.bot-window__input {
+	z-index: 20;
+	background: red;
+	
+	label {
+		bottom: 10%;
+		left: 18%;
+		width: 62%;
+		position: relative;
+	}
+
+	i {
+		color: var(--white-color);
+		background: var(--main-color);
+		padding: 10px;
+		cursor: pointer;
+		position: absolute;
+		bottom: 15%;
+		border-radius: 50%;
+		font-size: 12px;
+	}
+
+	input {
+		border-color: var(--accent-color);
+		position: relative;
+		padding: 8px;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			background: red;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+.random-coffee {
+	i {
+		padding: 10px;
+		background: var(--main-color);
+		color: var(--white-color);
+	}
+
+	&__contorls {
+		margin-top: 10%;
+	}
+}
+
+.coffee__button {
+	padding: 10px 40px;
+	background: var(--main-color);
+	color: var(--white-color);
+}
+
+.coffee__button-disabled {
+	background: var(--gray-color);
+}
+
+.sendFeed {
+	background: var(--main-color);
+	color: var(--white-color);
+
+	&:hover {
+		background: var(--main-color);
+	}
+}
+
+.stars {
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		padding: 20px;
+		color: var(--black-color);
+		border-radius: 6px;
+		border: 1px solid var(--main-color);
+	}
+
+	li.checked {
+		background: var(--main-color);
+	}
+}

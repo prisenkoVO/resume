@@ -1,0 +1,26 @@
+<a>
+  <li *ngIf="booleanVar">
+    <div class="cardTask shadow rounded" data-title="Завершить">
+      <div class="firstRowTask">
+        <div ngSwitch="{{Flag}}">
+          <p *ngSwitchCase="'1'" style="background: #FF2400; width: 20px; height: 20px;" class="rounded"></p>
+          <p *ngSwitchCase="'2'" style="background: rgb(241, 147, 6); width: 20px; height: 20px;" class="rounded"></p>
+          <p *ngSwitchCase="'3'" style="background: rgb(0, 143, 7); width: 20px; height: 20px;" class="rounded"></p>
+          <p *ngSwitchDefault>Без приоритета</p>
+        </div>
+        <p class="color">{{Title}}</p>
+      </div>
+      <div class="textOfTask">
+        <p class="color">{{Text}}</p>
+        <p *ngIf="Owner" class="color">Заказчик:{{Owner}}</p>
+      </div>
+      <div class="secondRowTask">
+        <p class="color">{{Author}}</p>
+        <p class="color">{{dateTime|date:'medium'}}</p>
+        <p class="color">{{deadLine|date:'medium'}}</p>
+      </div>
+
+      <div class="hint"><i class="fas fa-times" (click)="deleteTask(Id)"></i></div>
+    </div> 
+  </li>
+</a>
